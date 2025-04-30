@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-04-30T23:34:46.092766" rpa="false" schemaversion="5">
+<suite id="s1" name="RBFW" source="D:\PythonThu5\BTRobotFW\RBFW.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Mở trình duyệt">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:34:46.492340" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-30T23:34:46.492340" elapsed="4.698815"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-30T23:34:51.191750" elapsed="0.039505"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-30T23:34:51.231255" elapsed="0.451144"/>
+</kw>
+<status status="PASS" start="2025-04-30T23:34:46.491340" elapsed="5.191059"/>
+</kw>
+<kw name="Đăng nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:34:51.683767" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T23:34:51.683767" elapsed="0.113898"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:34:51.798673" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T23:34:51.797665" elapsed="0.143914"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:34:51.941579" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T23:34:51.941579" elapsed="0.096826"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-04-30T23:34:51.682399" elapsed="0.356006"/>
+</kw>
+<kw name="Kiểm tra đăng nhập thành công">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-30T23:34:52.039426" elapsed="1.699627"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Đăng nhập thành công</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-30T23:34:53.739053" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-30T23:34:52.038405" elapsed="1.700648"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-30T23:34:53.739053" elapsed="2.168520"/>
+</kw>
+<status status="PASS" start="2025-04-30T23:34:46.490340" elapsed="9.417233"/>
+</test>
+<test id="s1-t2" name="Invalid Login" line="18">
+<kw name="Mở trình duyệt">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:34:55.909520" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-30T23:34:55.909520" elapsed="4.224316"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-30T23:35:00.133836" elapsed="0.039197"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-30T23:35:00.174383" elapsed="0.448019"/>
+</kw>
+<status status="PASS" start="2025-04-30T23:34:55.909520" elapsed="4.712882"/>
+</kw>
+<kw name="Đăng nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:35:00.622402" level="INFO">Typing text 'saiuser' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T23:35:00.622402" elapsed="0.098823"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:35:00.722479" level="INFO">Typing text 'saipass' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T23:35:00.721225" elapsed="0.111320"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:35:00.832545" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T23:35:00.832545" elapsed="0.828275"/>
+</kw>
+<arg>saiuser</arg>
+<arg>saipass</arg>
+<status status="PASS" start="2025-04-30T23:35:00.622402" elapsed="1.038418"/>
+</kw>
+<kw name="Kiểm tra đăng nhập thất bại">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T23:35:04.479833" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B8DDEFA5+77893]
+	GetHandleVerifier [0x00007FF7B8DDF000+77984]
+	(No symbol) [0x00007FF7B8BA8FEC]
+	(No symbol) [0x00007FF7B8BEF44F]
+	(No symbol) [0x00007FF7B8C26FF2]
+	(No symbol) [0x00007FF7B8C21A02]
+	(No symbol) [0x00007FF7B8C20AC9]
+	(No symbol) [0x00007FF7B8B75AB5]
+	GetHandleVerifier [0x00007FF7B9097B6D+2931725]
+	GetHandleVerifier [0x00007FF7B9092132+2908626]
+	GetHandleVerifier [0x00007FF7B90B00F3+3031443]
+	GetHandleVerifier [0x00007FF7B8DF91EA+184970]
+	GetHandleVerifier [0x00007FF7B8E0086F+215311]
+	(No symbol) [0x00007FF7B8B74B2C]
+	GetHandleVerifier [0x00007FF7B91A2518+4023736]
+	BaseThreadInitThunk [0x00007FFC15DE259D+29]
+	RtlUserThreadStart [0x00007FFC16E8AF38+40]
+</msg>
+<msg time="2025-04-30T23:35:04.479833" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B8DDEFA5+77893]
+	GetHandleVerifier [0x00007FF7B8DDF000+77984]
+	(No symbol) [0x00007FF7B8BA91BA]
+	(No symbol) [0x00007FF7B8B94F15]
+	(No symbol) [0x00007FF7B8BB9F04]
+	(No symbol) [0x00007FF7B8C2EACF]
+	(No symbol) [0x00007FF7B8C4E972]
+	(No symbol) [0x00007FF7B8C26F03]
+	(No symbol) [0x00007FF7B8BF0328]
+	(No symbol) [0x00007FF7B8BF1093]
+	GetHandleVerifier [0x00007FF7B9097B6D+2931725]
+	GetHandleVerifier [0x00007FF7B9092132+2908626]
+	GetHandleVerifier [0x00007FF7B90B00F3+3031443]
+	GetHandleVerifier [0x00007FF7B8DF91EA+184970]
+	GetHandleVerifier [0x00007FF7B8E0086F+215311]
+	GetHandleVerifier [0x00007FF7B8DE6EC4+110436]
+	GetHandleVerifier [0x00007FF7B8DE7072+110866]
+	GetHandleVerifier [0x00007FF7B8DCD479+5401]
+	BaseThreadInitThunk [0x00007FFC15DE259D+29]
+	RtlUserThreadStart [0x00007FFC16E8AF38+40]
+</msg>
+<arg>xpath=//p[contains(text(), 'Invalid credentials')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2025-04-30T23:35:01.661907" elapsed="2.821226">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B8DDEFA5+77893]
+	GetHandleVerifier [0x00007FF7B8DDF000+77984]
+	(No symbol) [0x00007FF7B8BA91BA]
+	(No symbol) [0x00007FF7B8B94F15]
+	(No symbol) [0x00007FF7B8BB9F04]
+	(No symbol) [0x00007FF7B8C2EACF]
+	(No symbol) [0x00007FF7B8C4E972]
+	(No symbol) [0x00007FF7B8C26F03]
+	(No symbol) [0x00007FF7B8BF0328]
+	(No symbol) [0x00007FF7B8BF1093]
+	GetHandleVerifier [0x00007FF7B9097B6D+2931725]
+	GetHandleVerifier [0x00007FF7B9092132+2908626]
+	GetHandleVerifier [0x00007FF7B90B00F3+3031443]
+	GetHandleVerifier [0x00007FF7B8DF91EA+184970]
+	GetHandleVerifier [0x00007FF7B8E0086F+215311]
+	GetHandleVerifier [0x00007FF7B8DE6EC4+110436]
+	GetHandleVerifier [0x00007FF7B8DE7072+110866]
+	GetHandleVerifier [0x00007FF7B8DCD479+5401]
+	BaseThreadInitThunk [0x00007FFC15DE259D+29]
+	RtlUserThreadStart [0x00007FFC16E8AF38+40]
+</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Đăng nhập thất bại</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-04-30T23:35:04.483133" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-30T23:35:01.661326" elapsed="2.822814">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B8DDEFA5+77893]
+	GetHandleVerifier [0x00007FF7B8DDF000+77984]
+	(No symbol) [0x00007FF7B8BA91BA]
+	(No symbol) [0x00007FF7B8B94F15]
+	(No symbol) [0x00007FF7B8BB9F04]
+	(No symbol) [0x00007FF7B8C2EACF]
+	(No symbol) [0x00007FF7B8C4E972]
+	(No symbol) [0x00007FF7B8C26F03]
+	(No symbol) [0x00007FF7B8BF0328]
+	(No symbol) [0x00007FF7B8BF1093]
+	GetHandleVerifier [0x00007FF7B9097B6D+2931725]
+	GetHandleVerifier [0x00007FF7B9092132+2908626]
+	GetHandleVerifier [0x00007FF7B90B00F3+3031443]
+	GetHandleVerifier [0x00007FF7B8DF91EA+184970]
+	GetHandleVerifier [0x00007FF7B8E0086F+215311]
+	GetHandleVerifier [0x00007FF7B8DE6EC4+110436]
+	GetHandleVerifier [0x00007FF7B8DE7072+110866]
+	GetHandleVerifier [0x00007FF7B8DCD479+5401]
+	BaseThreadInitThunk [0x00007FFC15DE259D+29]
+	RtlUserThreadStart [0x00007FFC16E8AF38+40]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-04-30T23:35:04.484140" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-30T23:34:55.909520" elapsed="8.574620">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B8DDEFA5+77893]
+	GetHandleVerifier [0x00007FF7B8DDF000+77984]
+	(No symbol) [0x00007FF7B8BA91BA]
+	(No symbol) [0x00007FF7B8B94F15]
+	(No symbol) [0x00007FF7B8BB9F04]
+	(No symbol) [0x00007FF7B8C2EACF]
+	(No symbol) [0x00007FF7B8C4E972]
+	(No symbol) [0x00007FF7B8C26F03]
+	(No symbol) [0x00007FF7B8BF0328]
+	(No symbol) [0x00007FF7B8BF1093]
+	GetHandleVerifier [0x00007FF7B9097B6D+2931725]
+	GetHandleVerifier [0x00007FF7B9092132+2908626]
+	GetHandleVerifier [0x00007FF7B90B00F3+3031443]
+	GetHandleVerifier [0x00007FF7B8DF91EA+184970]
+	GetHandleVerifier [0x00007FF7B8E0086F+215311]
+	GetHandleVerifier [0x00007FF7B8DE6EC4+110436]
+	GetHandleVerifier [0x00007FF7B8DE7072+110866]
+	GetHandleVerifier [0x00007FF7B8DCD479+5401]
+	BaseThreadInitThunk [0x00007FFC15DE259D+29]
+	RtlUserThreadStart [0x00007FFC16E8AF38+40]
+</status>
+</test>
+<doc>Kiểm tra chức năng đăng nhập của trang web</doc>
+<status status="FAIL" start="2025-04-30T23:34:46.094885" elapsed="18.391264"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RBFW" id="s1" pass="1" fail="1" skip="0">RBFW</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-30T23:35:04.479833" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B8DDEFA5+77893]
+	GetHandleVerifier [0x00007FF7B8DDF000+77984]
+	(No symbol) [0x00007FF7B8BA8FEC]
+	(No symbol) [0x00007FF7B8BEF44F]
+	(No symbol) [0x00007FF7B8C26FF2]
+	(No symbol) [0x00007FF7B8C21A02]
+	(No symbol) [0x00007FF7B8C20AC9]
+	(No symbol) [0x00007FF7B8B75AB5]
+	GetHandleVerifier [0x00007FF7B9097B6D+2931725]
+	GetHandleVerifier [0x00007FF7B9092132+2908626]
+	GetHandleVerifier [0x00007FF7B90B00F3+3031443]
+	GetHandleVerifier [0x00007FF7B8DF91EA+184970]
+	GetHandleVerifier [0x00007FF7B8E0086F+215311]
+	(No symbol) [0x00007FF7B8B74B2C]
+	GetHandleVerifier [0x00007FF7B91A2518+4023736]
+	BaseThreadInitThunk [0x00007FFC15DE259D+29]
+	RtlUserThreadStart [0x00007FFC16E8AF38+40]
+</msg>
+</errors>
+</robot>
